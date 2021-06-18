@@ -1,71 +1,68 @@
-import React, { useEffect, useState } from 'react'; 
-import { View, Text, Image, Button, Linking } from 'react-native';
-import { Card } from 'react-native-elements';
-import styles from './styles.js';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-
-const ScreenContainer = ({children}) => (
-    <ScrollView style={styles.container}>
-        <View style={styles.header}>
-            <Image source={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fimagem&psig=AOvVaw1hyjqeHgknu4BQlawcuf3H&ust=1623724758019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDl0p6MlvECFQAAAAAdAAAAABAJ"}/>
-            <Text style={styles.headerText}>
-                Bancos de Leite
-            </Text>
-            <TouchableOpacity>
-            </TouchableOpacity>
-        </View> 
-        
-        <View >
-            <Card 
-                image={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fimagem&psig=AOvVaw1hyjqeHgknu4BQlawcuf3H&ust=1623724758019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDl0p6MlvECFQAAAAAdAAAAABAJ"}>
-                <Text style={{marginBottom: 10}}>
-                Banco de Leite Humano Marly Sarney
-                R. Mato Grosso, 1401 · (79) 3226-6301
-                Closed ⋅ Opens 7AM Mon
-                </Text>
-                <Button title="Entrar em contato" onPress={ ()=>{ Linking.openURL(notice.link)}} />
-            </Card>
-            <Card 
-                image={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fimagem&psig=AOvVaw1hyjqeHgknu4BQlawcuf3H&ust=1623724758019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDl0p6MlvECFQAAAAAdAAAAABAJ"}>
-                <Text style={{marginBottom: 10}}>
-                Banco de Leite Humano Marly Sarney
-                R. Mato Grosso, 1401 · (79) 3226-6301
-                Closed ⋅ Opens 7AM Mon
-                </Text>
-                <Button title="Entrar em contato" onPress={ ()=>{ Linking.openURL(notice.link)}} />
-            </Card>
-            <Card 
-                image={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fimagem&psig=AOvVaw1hyjqeHgknu4BQlawcuf3H&ust=1623724758019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDl0p6MlvECFQAAAAAdAAAAABAJ"}>
-                <Text style={{marginBottom: 10}}>
-                Banco de Leite Humano Marly Sarney
-                R. Mato Grosso, 1401 · (79) 3226-6301
-                Closed ⋅ Opens 7AM Mon
-                </Text>
-                <Button title="Entrar em contato" onPress={ ()=>{ Linking.openURL(notice.link)}} />
-            </Card>
-            <Card 
-                image={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fimagem&psig=AOvVaw1hyjqeHgknu4BQlawcuf3H&ust=1623724758019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDl0p6MlvECFQAAAAAdAAAAABAJ"}>
-                <Text style={{marginBottom: 10}}>
-                Banco de Leite Humano Marly Sarney
-                R. Mato Grosso, 1401 · (79) 3226-6301
-                Closed ⋅ Opens 7AM Mon
-                </Text>
-                <Button title="Entrar em contato" onPress={ ()=>{ Linking.openURL(notice.link)}} />
-            </Card>
-            <Card 
-                image={"https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fimagem&psig=AOvVaw1hyjqeHgknu4BQlawcuf3H&ust=1623724758019000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDl0p6MlvECFQAAAAAdAAAAABAJ"}>
-                <Text style={{marginBottom: 10}}>
-                Banco de Leite Humano Marly Sarney
-                R. Mato Grosso, 1401 · (79) 3226-6301
-                Closed ⋅ Opens 7AM Mon
-                </Text>
-                <Button title="Entrar em contato" onPress={ ()=>{ Linking.openURL(notice.link)}} />
-            </Card>
-            
-        </View>
-    </ScrollView>
-)
+import React, { useEffect, useState } from "react";
+import { View, Text, Image, Pressable, FlatList } from "react-native";
+import styles from "./styles";
+import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
 export const Milkbanks = () => (
-    <ScreenContainer/>
-)
+  <ScrollView style={styles.container}>
+    <View>
+      <View style={styles.card}>
+        <Image
+          style={{ borderRadius: 20, width: 110, height: 110, margin: 5 }}
+          source={{
+            uri: "https://reactnative.dev/img/tiny_logo.png",
+          }}
+        />
+        <View style={{ flex: 1, alignItems: "center" }}>
+          <Text style={styles.textCard} numberOfLines={5}>
+            TEste 01 duas vezes para tentar resolver o e ver se ta ok ehruiahs
+            asdaosdkpaksdajsidoj dajhuisdhj ahusidhaush asuhdihaweq qweq weq we
+            qweqwe qweq we qwe qweqweqwe qweq weqwe qwe qwe123 123 1231241
+            we1231
+          </Text>
+          <Pressable style={[styles.button, styles.buttonOpen]}>
+            <Text style={styles.textStyle}>Show Modal</Text>
+          </Pressable>
+        </View>
+      </View>
+      <View style={styles.card}>
+        <Image
+          style={{ borderRadius: 20, width: 110, height: 110, margin: 5 }}
+          source={{
+            uri: "https://reactnative.dev/img/tiny_logo.png",
+          }}
+        />
+        <View style={{ flex: 1, alignItems: "center" }}>
+          <Text style={styles.textCard} numberOfLines={5}>
+            TEste 01 duas vezes para tentar resolver o e ver se ta ok ehruiahs
+            asdaosdkpaksdajsidoj dajhuisdhj ahusidhaush asuhdihaweq qweq weq we
+            qweqwe qweq we qwe qweqweqwe qweq weqwe qwe qwe123 123 1231241
+            we1231
+          </Text>
+          <Pressable style={[styles.button, styles.buttonOpen]}>
+            <Text style={styles.textStyle}>Show Modal</Text>
+          </Pressable>
+        </View>
+      </View>
+      <View style={styles.card}>
+        <Image
+          style={{ borderRadius: 20, width: 110, height: 110, margin: 5 }}
+          source={{
+            uri: "https://reactnative.dev/img/tiny_logo.png",
+          }}
+        />
+        <View style={{ flex: 1, alignItems: "center" }}>
+          <Text style={styles.textCard} numberOfLines={5}>
+            TEste 01 duas vezes para tentar resolver o e ver se ta ok ehruiahs
+            asdaosdkpaksdajsidoj dajhuisdhj ahusidhaush asuhdihaweq qweq weq we
+            qweqwe qweq we qwe qweqweqwe qweq weqwe qwe qwe123 123 1231241
+            we1231
+          </Text>
+          <Pressable style={[styles.button, styles.buttonOpen]}>
+            <Text style={styles.textStyle}>Show Modal</Text>
+          </Pressable>
+        </View>
+      </View>
+    </View>
+  </ScrollView>
+);
