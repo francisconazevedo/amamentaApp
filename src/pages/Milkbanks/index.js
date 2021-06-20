@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { View, Text, Image, Pressable, FlatList } from "react-native";
+import React from "react";
+import { View, Text, Image, Pressable, ScrollView } from "react-native";
 import styles from "./styles";
-import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 
 export const Milkbanks = () => (
   <ScrollView style={styles.container}>

@@ -5,8 +5,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 12,
-    paddingTop: Constants.statusBarHeight + 20,
-    backgroundColor: "#ff8879",
+    backgroundColor: "#f7efef",
   },
 
   header: {
@@ -60,7 +59,7 @@ export default StyleSheet.create({
     elevation: 0,
   },
   buttonOpen: {
-    backgroundColor: "#F194FF",
+    backgroundColor: "#eb8174",
   },
   tinyLogo: {
     width: 50,
