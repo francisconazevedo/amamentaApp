@@ -1,23 +1,11 @@
 import React from "react";
-import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
-
+import { View, Text, Image, ScrollView, TouchableOpacity, Button } from "react-native";
 import styles from "./styles";
 
-import MoreData from "../../components/moreData";
 
-const list = [
-  {
-    name: "Amy Farha",
-    avatar_url: require("../../../assets/truthmiths.png"),
-    subtitle: "Vice President",
-  },
-  {
-    name: "Chris Jackson",
-    avatar_url:
-      "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
-    subtitle: "Vice Chairman",
-  },
-];
+const gotomilk = async () => {
+    navigation.navigate("Register");
+};
 
 export const Home = () => (
   <ScrollView style={styles.container}>
@@ -61,7 +49,13 @@ export const Home = () => (
           </View>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <Button
+          title="Add some friends"
+          onPress={() =>
+            this.props.navigation.navigate('Register')
+          }
+        />
+      <TouchableOpacity onClick={gotomilk}>
         <View style={styles.card}>
           <Image
             style={{ borderRadius: 20, width: 60, height: 60 }}
