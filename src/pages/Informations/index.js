@@ -9,10 +9,8 @@ const styles = StyleSheet.create({
   button: {},
 });
 
-const ScreenContainer = ({ children }) => (
+export const Informations = ({ children }) => (
   <View style={styles.container}>
     <Text> {children} </Text>
   </View>
 );
-
-export const Informations = () => <ScreenContainer />;

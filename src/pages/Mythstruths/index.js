@@ -15,4 +15,4 @@ const ScreenContainer = ({ children }) => (
   </View>
 );
 
-export const Informations = () => <ScreenContainer />;
+export const Mythstruths = () => <ScreenContainer />;

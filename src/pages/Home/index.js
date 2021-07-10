@@ -1,15 +1,18 @@
 import React from "react";
 import { View, Text, Image, ScrollView, TouchableOpacity, Button } from "react-native";
 import styles from "./styles";
-
+import { useNavigation } from '@react-navigation/native';
 
 const gotomilk = async () => {
     navigation.navigate("Register");
 };
 
-export const Home = () => (
+export const Home = () => {
+  const navigation = useNavigation();
+
+  return (
   <ScrollView style={styles.container}>
-    <View style={{ alignItems: "center" }}>
+    <View style={{ alignItems: "center", justifyContent: 'center' }}>
       <Image
         style={styles.stretch}
         source={require("../../../assets/icon.png")}
@@ -23,7 +26,7 @@ export const Home = () => (
       </Text>
     </View>
     <View style={{ justifyContent: "center", margin: 15 }}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Informations')}>
         <View style={styles.card}>
           <Image
             style={{ borderRadius: 20, width: 60, height: 60 }}
@@ -36,7 +39,7 @@ export const Home = () => (
           </View>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Mythstruths')}>
         <View style={styles.card}>
           <Image
             style={{ borderRadius: 20, width: 60, height: 60 }}
@@ -49,13 +52,8 @@ export const Home = () => (
           </View>
         </View>
       </TouchableOpacity>
-      <Button
-          title="Add some friends"
-          onPress={() =>
-            this.props.navigation.navigate('Register')
-          }
-        />
-      <TouchableOpacity onClick={gotomilk}>
+      
+      <TouchableOpacity onPress={() => navigation.navigate('Links')}>
         <View style={styles.card}>
           <Image
             style={{ borderRadius: 20, width: 60, height: 60 }}
@@ -70,4 +68,4 @@ export const Home = () => (
       </TouchableOpacity>
     </View>
   </ScrollView>
-);
+)};

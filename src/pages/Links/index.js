@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
   button: {},
 });
 
-export const Register = ({ navigation }) => {
+export const Links = ({ navigation }) => {
   return (
   <View style={styles.container}>
-    <Text> {children} </Text>
+    <Text> {} </Text>
   </View>
   )
 };

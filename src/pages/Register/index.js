@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, TextInput, Button } from "react-native";
-import AsyncStorage from '@react-native-community/async-storage';
+import { View, Text, AsyncStorage, TextInput, Button } from "react-native";
 import styles from "./styles";
 import { Formik } from 'formik';
 
