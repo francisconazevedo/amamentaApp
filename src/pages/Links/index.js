@@ -9,10 +9,11 @@ const styles = StyleSheet.create({
   button: {},
 });
 
-export const ScreenContainer = ({ children }) => (
+export const Register = ({ navigation }) => {
+  return (
   <View style={styles.container}>
     <Text> {children} </Text>
   </View>
-);
+  )
+};
 
- const Links = () => <ScreenContainer />;
