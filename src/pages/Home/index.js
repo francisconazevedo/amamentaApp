@@ -3,6 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity, Button } from "react-n
 import styles from "./styles";
 import { useNavigation } from '@react-navigation/native';
 
+//teste
 const gotomilk = async () => {
     navigation.navigate("Register");
 };
